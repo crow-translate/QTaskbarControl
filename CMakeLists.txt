@@ -31,7 +31,7 @@ elseif(WIN32)
 elseif(APPLE AND NOT IOS)
     target_sources(${PROJECT_NAME} PRIVATE qtaskbarcontrol_mac.mm)
 
-    find_package(Qt COMPONENTS MacExtras REQUIRED)
+    find_package(Qt5 COMPONENTS MacExtras REQUIRED)
     find_library(APPKIT_LIBRARY AppKit)
     target_link_libraries(${PROJECT_NAME} PRIVATE Qt5::MacExtras ${APPKIT_LIBRARY})
 else()
